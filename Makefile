@@ -59,8 +59,14 @@ clean:
 	rm -f ./$(EXECUTABLE) $(OBJECTS)
 
 update:
-	svn update
+	git pull
+
+commit:
+	git commit
+	git push
 
 refresh:
 	make clean
 	make update
+	make
+
