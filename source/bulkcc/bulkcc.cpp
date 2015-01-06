@@ -34,7 +34,7 @@ testBULKCC( void ) {
 
   try {
 
-    Controller controller;
+    Controller controller; // use template methods for bulk stack template
 
     // some complex objects for testing Obj objects
     std::string* string1 = new std::string( );
@@ -53,7 +53,8 @@ testBULKCC( void ) {
 
     int found = -1;
     found = controller.search<std::exception*>( obj );
-    std::cout << "std::exception* -> found: " << found << std::endl << std::flush;
+    std::cout << "std::exception* -> found: " << found << std::endl
+              << std::flush;
 
     found = -1;
     found = controller.search<std::string*>( obj );
@@ -76,7 +77,7 @@ testBULKCC( void ) {
     delete fetchedString;
 
     //
-    // some tries even if there are no objects left, no errors, no exceptions ~8>
+    // some tries even if there are no objects left, no errors, no exceptions
     //
     fetchedException = controller.fetch<std::exception*>( obj );
     delete fetchedException;
@@ -85,7 +86,8 @@ testBULKCC( void ) {
 
     found = -1;
     found = controller.search<std::exception*>( obj );
-    std::cout << "std::exception* -> found: " << found << std::endl << std::flush;
+    std::cout << "std::exception* -> found: " << found << std::endl
+              << std::flush;
 
     found = -1;
     found = controller.search<std::string*>( obj );
@@ -106,7 +108,8 @@ testBULKCC( void ) {
     // create list
 
     std::cout << std::endl << std::flush;
-    std::cout << "long long list with: " << (end*2)+1 << " elements" << std::endl << std::flush;
+    std::cout << "long long list with: " << (end*2)+1 << " elements"
+              << std::endl << std::flush;
     std::cout << std::endl << std::flush;
 
     for( int i = 0; i < end; i++ ) {
@@ -126,10 +129,11 @@ testBULKCC( void ) {
     // convert half of complex objects to pointer list of complex objects
     
     std::cout << std::endl << std::flush;
-    std::cout << "convert added objects of std::string* to list std::string**" << std::endl << std::flush;
+    std::cout << "convert added objects of std::string* to list std::string**"
+              << std::endl << std::flush;
 
-    int noOfStringObjs = controller.search<std::string*>( cObj ); /// kill all added objects
-    std::string** stringObjList = controller.list<std::string*>( cObj ); /// kill all added objects
+    int noOfStringObjs = controller.search<std::string*>( cObj ); // kill all added objects
+    std::string** stringObjList = controller.list<std::string*>( cObj ); // kill all added objects
 
     std::cout << std::endl << std::flush;
 
