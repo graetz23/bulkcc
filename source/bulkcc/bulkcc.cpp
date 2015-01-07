@@ -122,7 +122,7 @@ testBULKCC( void ) {
 
       controller.add<std::exception*>( exc, cObj );
 
-    } // i
+    } // i till end
     
     std::cout << std::endl << std::flush;
     
