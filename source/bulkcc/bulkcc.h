@@ -4,7 +4,7 @@
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
- * Copyright (c) 2008-2015 Christian Scheiblich (cscheiblich@gmail.com)
+ * Copyright (c) 2008-2016 Christian Scheiblich (cscheiblich@gmail.com)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -39,8 +39,8 @@ namespace BULKCC {
 #define _BULKCC_PACKAGE_ "Kiera Gothe" // since 20100805
 
 /// first load test are done for prototype of binary hash function and tree
-#define _BULKCC_VERSION_ "0.15"
-#define _BULKCC_DATE_ 20141231
+#define _BULKCC_VERSION_ "0.16"
+#define _BULKCC_DATE_ 20160106
 
 void testBULKCC( void ); // test function
 
