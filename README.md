@@ -1,5 +1,6 @@
-BULKCC is a C++ bulk stack implementation.
-
+[![Build Status](https://travis-ci.org/cscheiblich/bulkcc.svg?branch=master)](https://travis-ci.org/cscheiblich/bulkcc) on travis-ci.com
+BULKCC is a C++ bulk stack implementation
+=========================================
 BULKCC is distributed under the MIT License (MIT); this file is part of.
 
 Copyright (c) 2008-2016 Christian Scheiblich (cscheiblich@gmail.com)
