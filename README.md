@@ -23,11 +23,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
+version
+-------
+
 BULKCC Version 0.16 20160106
 
 change log:
+-----------
 
 201XXXXX version 0.1X :
+- updated readme file
 
 20160106 version 0.16 :
 - cleaned code due to old MSVS stuff ..
