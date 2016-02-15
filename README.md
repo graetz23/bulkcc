@@ -1,6 +1,16 @@
 [![Build Status](https://travis-ci.org/cscheiblich/bulkcc.svg?branch=master)](https://travis-ci.org/cscheiblich/bulkcc) on travis-ci.com
 BULKCC is a C++ bulk stack implementation
 =========================================
+
+BULKCC is an object-oriented templated based list for storing any data / object
+types in one single list. It is ideal directly after some parsing method, while
+the parse generates data / objects of known type but in unknown sequence. There-
+fore, the data / objects can be pushed in their sequence to a single BULKCC
+list, that allows for searching by data / types or reading the sequence again.
+
+License
+-------
+
 BULKCC is distributed under the MIT License (MIT); this file is part of.
 
 Copyright (c) 2008-2016 Christian Scheiblich (cscheiblich@gmail.com)
@@ -23,12 +33,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-version
+Version
 -------
 
 BULKCC Version 0.16 20160106
 
-change log:
+Change Log:
 -----------
 
 201XXXXX version 0.1X :
