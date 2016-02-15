@@ -30,7 +30,7 @@
 
 namespace BULKCC {
 
-#define _VERSION_BULKCC_TYPE_ObjTypes_ 0.15 // 20141231
+#define _VERSION_BULKCC_TYPE_ObjTypes_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_TYPE_ObjTypes_
 
 namespace TYPE {

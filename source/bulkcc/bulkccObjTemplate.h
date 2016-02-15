@@ -30,7 +30,7 @@
 
 #include "./bulkccObj.h" // BULKCC::Obj
 
-#define _VERSION_BULKCC_ObjTemplate_ 0.15 // 20141231
+#define _VERSION_BULKCC_ObjTemplate_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_ObjTemplate_
 
 namespace BULKCC {

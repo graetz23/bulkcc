@@ -33,7 +33,7 @@
 
 namespace BULKCC {
 
-#define _VERSION_BULKCC_Obj_ 0.15 // 20141231
+#define _VERSION_BULKCC_Obj_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_Obj_
 
 class Obj {

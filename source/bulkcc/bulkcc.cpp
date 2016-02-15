@@ -34,12 +34,18 @@ testBULKCC( void ) {
 
   try {
 
+    // The controller keeps the the templated based functions for the data
+    // object template list. The template list does implement any functionality
+    // and has a native base class, while only the first sub class implements
+    // a template class.
+    //
     Controller controller; // use template methods for bulk stack template
 
     // some complex objects for testing Obj objects
-    std::string* string1 = new std::string( );
-    std::string* string2 = new std::string( );
-    std::string* string3 = new std::string( );
+    //
+    std::string* string1 = new std::string( "first" );
+    std::string* string2 = new std::string( "second" );
+    std::string* string3 = new std::string( "third" );
     std::exception* exception1 = new std::exception( );
     std::exception* exception2 = new std::exception( );
     std::exception* exception3 = new std::exception( );
@@ -67,8 +73,8 @@ testBULKCC( void ) {
     fetchedException = controller.fetch<std::exception*>( obj );
     delete fetchedException;
 
-
     // delete fetched;
+    //
     std::string* fetchedString = controller.fetch<std::string*>( obj );
     delete fetchedString;
     fetchedString = controller.fetch<std::string*>( obj );
@@ -76,7 +82,6 @@ testBULKCC( void ) {
     fetchedString = controller.fetch<std::string*>( obj );
     delete fetchedString;
 
-    //
     // some tries even if there are no objects left, no errors, no exceptions
     //
     fetchedException = controller.fetch<std::exception*>( obj );
@@ -94,19 +99,18 @@ testBULKCC( void ) {
     std::cout << "std::string* -> found: " << found << std::endl << std::flush;
 
     // delete the pointer list
+    //
     controller.erase( obj );
 
 
-    //
     // automatic test
     //
-    
     int end = 500000; // will be one million and one
     std::string* str1 = new std::string( );
     Obj* cObj = controller.add<std::string*>( str1 );
    
     // create list
-
+    //
     std::cout << std::endl << std::flush;
     std::cout << "long long list with: " << (end*2)+1 << " elements"
               << std::endl << std::flush;
@@ -127,7 +131,7 @@ testBULKCC( void ) {
     std::cout << std::endl << std::flush;
     
     // convert half of complex objects to pointer list of complex objects
-    
+    //
     std::cout << std::endl << std::flush;
     std::cout << "convert added objects of std::string* to list std::string**"
               << std::endl << std::flush;
@@ -138,7 +142,7 @@ testBULKCC( void ) {
     std::cout << std::endl << std::flush;
 
     // delete the pointer list in well-known style
-    
+    //
     std::cout << std::endl << std::flush;
     std::cout << "delete converted objects of std::string* in list std::string**" << std::endl << std::flush;
     
@@ -151,7 +155,7 @@ testBULKCC( void ) {
     std::cout << std::endl << std::flush;
 
     // delete the rest of the added objects, other half
-
+    //
     std::cout << std::endl << std::flush;
     std::cout << "deleting added objects" << std::endl << std::flush;
     
@@ -160,7 +164,7 @@ testBULKCC( void ) {
     std::cout << std::endl << std::flush;
 
     // delete the bulkccObj* objects themselves
-
+    //
     std::cout << "deleting list" << std::endl << std::flush;
     controller.erase( cObj );
 
