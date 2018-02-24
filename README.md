@@ -1,4 +1,4 @@
-##BULKCC is a C++ bulk stack implementation##
+## BULKCC is a C++ bulk stack implementation ##
 
 [![Build Status](https://travis-ci.org/cscheiblich/bulkcc.svg?branch=master)](https://travis-ci.org/cscheiblich/bulkcc) on travis-ci.com
 
@@ -14,7 +14,7 @@ class forms the sub class for. However, a controller class implements the auto-
 matic template functionality for storing data / objects to the sub class and
 queueing up the base class by an infinite pointered list. Have fun. ~8>
 
-###License###
+### License ###
 
 **BULKCC is distributed under the MIT License (MIT); this file is part of.**
 
@@ -38,11 +38,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-###Version###
+### Version ###
 
 **BULKCC Version 0.16 20160106**
 
-###Change Log###
+### Change Log ###
 
 201XXXXX version 0.1X :
 - updated readme file

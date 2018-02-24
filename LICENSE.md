@@ -1,4 +1,4 @@
-##LICENSE##
+## LICENSE ##
 
 **BULKCC is distributed under the MIT License (MIT); this file is part of.**
 
