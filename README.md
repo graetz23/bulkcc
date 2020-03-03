@@ -44,8 +44,8 @@ THE SOFTWARE.
 
 ### Change Log ###
 
-201XXXXX version 0.1X :
-- updated readme file
+2020030 version 0.16 :
+- updated contact information
 
 20160106 version 0.16 :
 - cleaned code due to old MSVS stuff ..
@@ -53,7 +53,7 @@ THE SOFTWARE.
 
 20141231 version 0.15 :
 - changed to the MIT License (MIT)
-- pushed to https://github.com/cscheiblich/blukcc for development
+- pushed to https://github.com/graetz23/blukcc for development
 
 20120430 version 0.14 :
 - changed copyright towards 2012 and removed old email address
@@ -65,7 +65,7 @@ THE SOFTWARE.
 
 20100805 version 0.12 :
 - tested for Microsoft Windows 7 using MS Visual Studio 2005
-- tested for GNU/Linux debian 5.0 kernel 2.6.26-2-686 using GNU/g++/gcc 4.3.2 
+- tested for GNU/Linux debian 5.0 kernel 2.6.26-2-686 using GNU/g++/gcc 4.3.2
 - added readMe.txt
 - added Makefile
 
