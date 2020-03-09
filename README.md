@@ -1,6 +1,6 @@
 ## BULKCC is a C++ bulk stack implementation ##
 
-[![Build Status](https://travis-ci.org/cscheiblich/bulkcc.svg?branch=master)](https://travis-ci.org/cscheiblich/bulkcc) on travis-ci.com
+[![Build Status](https://travis-ci.org/graetz23/bulkcc.svg?branch=master)](https://travis-ci.org/graetz23/bulkcc) on travis-ci.com
 
 BULKCC is an object-oriented C++ template based list for storing any data /
 object types in one single list. It is ideal directly after some parsing method,
