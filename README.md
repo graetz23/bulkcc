@@ -2,17 +2,23 @@
 
 [![Build Status](https://travis-ci.org/graetz23/bulkcc.svg?branch=master)](https://travis-ci.org/graetz23/bulkcc) on travis-ci.com
 
-BULKCC is an object-oriented C++ template based list for storing any data /
-object types in one single list. It is ideal directly after some parsing method,
-while the parser generates data / objects of known type but in unknown sequence.
-Therefore, the data / objects can be pushed in their sequence to a single BULKCC
-list, that allows for searching by data / types or reading the sequence again.
+BULKCC is an object-oriented C++ template based _stack_ for storing any _type_ of
+data. 
 
-The implementation separates the template based methods from tha data / object
-list. The data / object list consists of a native base class where a template
-class forms the sub class for. However, a controller class implements the auto-
-matic template functionality for storing data / objects to the sub class and
-queueing up the base class by an infinite pointered list. Have fun. ~8>
+Directly after some parsing method, while the parser or a tokenizer generates
+_typed_ data or objects in unknown sequence, BULKCC can be used to store those.
+Thereby, the typed data / objects are pushed in (unkown) sequence into BULKCC.
+
+BULKCC allows for searching by data / objects by its type or reading the
+- yet known - sequence, poping them of the stack, as pushed in; _first in, first out_.
+
+BLUKCC's implementation separates the template based methods for handling the stack
+from storing the _typed_ data or object. Therefore the stack consists of a
+non-template base class, where a template class derives. However, a controller
+class implements the necessary template functionality for handling the stack.
+The stack itself is an infinite pointer refrenced list.
+
+Have fun. ~8>
 
 ### License ###
 
