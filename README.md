@@ -1,7 +1,5 @@
 ## BULKCC is a C++ bulk stack implementation ##
 
-[![Build Status](https://travis-ci.org/graetz23/bulkcc.svg?branch=master)](https://travis-ci.org/graetz23/bulkcc) on travis-ci.com
-
 BULKCC is an object-oriented C++ template based _stack_ for storing any _type_ of
 data. 
 
@@ -24,7 +22,7 @@ Have fun. ~8>
 
 **BULKCC is distributed under the MIT License (MIT); this file is part of.**
 
-**Copyright (c) 2008-2020 Christian (graetz23@gmail.com)**
+**Copyright (c) 2008-2024 Christian (graetz23@gmail.com)**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
