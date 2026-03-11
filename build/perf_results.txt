@@ -1,1 +1,5 @@
 perf_push_100k: 0.017039 seconds (100000 items, 0.170390 us/item)
+perf_push_100k: 0.010805 seconds (100000 items, 0.108050 us/item)
+perf_fetch_100k: 0.008047 seconds (1000 items, 8.047000 us/item)
+perf_search_100k: 0.997795 seconds (1000 items, 997.795000 us/item)
+perf_list_100k: 0.004699 seconds (33334 items, 0.140967 us/item)
