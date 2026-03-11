@@ -1,8 +1,0 @@
-sudo: false
-language: cpp
-compiler:
-  - clang
-  - gcc
-os:
-  - linux
-script: make && ./bulkcc
