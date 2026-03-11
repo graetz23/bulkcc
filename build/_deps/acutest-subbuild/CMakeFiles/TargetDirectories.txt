@@ -1,3 +1,0 @@
-/home/chda/source/bulkcc/build/_deps/acutest-subbuild/CMakeFiles/acutest-populate.dir
-/home/chda/source/bulkcc/build/_deps/acutest-subbuild/CMakeFiles/edit_cache.dir
-/home/chda/source/bulkcc/build/_deps/acutest-subbuild/CMakeFiles/rebuild_cache.dir
