@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/CMakeFiles/acutest-populate"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/CMakeFiles/acutest-populate.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/CMakeFiles/acutest-populate-complete.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-build.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-configure.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-download.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-install.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-patch.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-test.rule"
+		},
+		{
+			"file" : "/home/chda/source/bulkcc/build/_deps/acutest-subbuild/acutest-populate-prefix/src/acutest-populate-stamp/acutest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"acutest-populate"
+		],
+		"name" : "acutest-populate"
+	}
+}

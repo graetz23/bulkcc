@@ -1,10 +1,11 @@
 /** 
  * @file bulkccTypeObjTypes.h
+ * @brief Type definitions for BULKCC objects
  * @author Christian
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
- * Copyright (c) 2008-2024 Christian (graetz23@gmail.com)
+ * Copyright (c) 2016-2026 Christian (graetz23@gmail.com)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,11 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @namespace BULKCC::TYPE
+ * @brief Namespace containing type definitions for BULKCC objects.
+ *
+ * @{
  */
 
 #ifndef __bulkccObjTypes_h__
@@ -33,14 +39,23 @@ namespace BULKCC {
 #define _VERSION_BULKCC_TYPE_ObjTypes_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_TYPE_ObjTypes_
 
+/**
+ * @brief Namespace for object type definitions
+ */
 namespace TYPE {
 
+/**
+ * @brief Enumeration of object types in BULKCC
+ */
 enum ObjType {
+  /** @brief Template-based object type */
   Template = 0
 }; // enum ObjType
 
 } // namespace TYPE
 
 } // namespace BULKCC
+
+/** @} */
 
 #endif // __bulkccObjTypes_h__

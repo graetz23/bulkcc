@@ -1,0 +1,1 @@
+perf_push_100k: 0.017039 seconds (100000 items, 0.170390 us/item)

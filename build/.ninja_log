@@ -1,0 +1,25 @@
+# ninja log v5
+2	242	1773221998289608894	CMakeFiles/bulkcc_test.dir/tests/test_bulkcc.cpp.o	b180d315e1cd1ddd
+1	147	1773221938919604705	CMakeFiles/bulkcc.dir/source/bulkcc/bulkccException.cpp.o	1a833fb67e198b79
+1	166	1773221938941254335	CMakeFiles/bulkcc.dir/source/bulkcc/bulkccObj.cpp.o	bffa79085d1f4c6a
+2	166	1773221938941254335	CMakeFiles/bulkcc.dir/source/bulkcc/bulkcc.cpp.o	a5173e94a80c484f
+3	107	1773221998155608115	CMakeFiles/bulkcc_test.dir/source/bulkcc/bulkccController.cpp.o	39c65f5de11e7fcf
+1	180	1773221938956900049	CMakeFiles/bulkcc.dir/source/bulkcc/bulkccController.cpp.o	70667ac0330ed17e
+3	181	1773221998228608539	CMakeFiles/bulkcc_test.dir/source/bulkcc/bulkcc.cpp.o	3d8f5248a2185742
+180	234	1773221939010119238	bulkcc	1cbde2fb95047f48
+2	176	1773221938953365263	CMakeFiles/bulkcc.dir/source/main.cpp.o	28c4a2a7c08031d
+2	58	1773221998106607830	CMakeFiles/bulkcc_test.dir/tests/src/test_types.cpp.o	7b616c3d4b8d03
+3	107	1773221998154608109	CMakeFiles/bulkcc_test.dir/source/main.cpp.o	347f919245089cd6
+2	155	1773221998203074661	CMakeFiles/bulkcc_test.dir/source/bulkcc/bulkccObj.cpp.o	b347b04801a5a4f3
+2	158	1773221998205608406	CMakeFiles/bulkcc_test.dir/source/bulkcc/bulkccException.cpp.o	f5b58018fd068652
+1	788	1773222010832979478	build.ninja	2e56aee69950a120
+1	837	1773222010832979478	build.ninja	2e56aee69950a120
+1	56	1773222010897134934	bulkcc_test	b7cefcf55254e57a
+3	164	1773222131730343602	CMakeFiles/bulkcc_test.dir/tests/test_bulkcc.cpp.o	b180d315e1cd1ddd
+164	204	1773222131771713418	bulkcc_test	b7cefcf55254e57a
+2	104	1773222799085711978	CMakeFiles/bulkcc_test.dir/source/bulkcc/bulkccController.cpp.o	39c65f5de11e7fcf
+2	112	1773222799092237380	CMakeFiles/bulkcc_test.dir/source/bulkcc/bulkcc.cpp.o	3d8f5248a2185742
+1	211	1773222799191237752	CMakeFiles/bulkcc_test.dir/tests/test_bulkcc.cpp.o	b180d315e1cd1ddd
+211	257	1773222799237237925	bulkcc_test	b7cefcf55254e57a
+2	184	1773222939535755963	CMakeFiles/bulkcc_test.dir/tests/test_bulkcc.cpp.o	b180d315e1cd1ddd
+184	223	1773222939575616720	bulkcc_test	b7cefcf55254e57a

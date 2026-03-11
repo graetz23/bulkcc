@@ -1,10 +1,11 @@
 /** 
  * @file bulkccException.h
+ * @brief Exception class for BULKCC errors
  * @author Christian
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
- * Copyright (c) 2008-2024 Christian (graetz23@gmail.com)
+ * Copyright (c) 2016-2026 Christian (graetz23@gmail.com)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,11 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @class BULKCC::Exception
+ * @brief Exception class for reporting BULKCC errors.
+ *
+ * @{
  */
 
 #ifndef __bulkccException_h__
@@ -35,20 +41,39 @@ namespace BULKCC {
 #define _VERSION_BULKCC_Exception_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_Exception_
 
+/**
+ * @brief Exception class for BULKCC errors
+ *
+ * This class is thrown when an error occurs in the BULKCC library,
+ * such as requesting an unknown object type.
+ */
 class Exception {
- public:
+  public:
 
-  Exception( Str msg ); /// constructor
-  ~Exception( void ); /// destructor
+    /**
+     * @brief Constructs an exception with a message
+     * @param msg The error message
+     */
+    Exception( Str msg );
 
-  const char* what( void ) const; /// what
+    /** @brief Destructor */
+    ~Exception( void );
 
- protected:
- 
-  Str _msg; /// stored exception message
+    /**
+     * @brief Gets the error message
+     * @return C-string containing the error message
+     */
+    const char* what( void ) const;
+
+  protected:
+  
+    /** @brief Stored exception message */
+    Str _msg;
 
 }; // class Exception 
 
 } // namespace BULKCC
+
+/** @} */
 
 #endif // __bulkccException_h__

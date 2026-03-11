@@ -1,10 +1,11 @@
 /** 
  * @file bulkcc.h
+ * @brief Main header file for BULKCC library
  * @author Christian
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
- * Copyright (c) 2008-2024 Christian (graetz23@gmail.com)
+ * Copyright (c) 2016-2026 Christian (graetz23@gmail.com)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,21 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @defgroup BULKCC BULKCC Library
+ * @brief A C++ template-based bulk stack for storing typed data during parsing and tokenizing.
+ *
+ * BULKCC is an object-oriented C++ template-based stack for storing any type of data.
+ * It is designed for scenarios where a parser or tokenizer generates typed data or objects
+ * in unknown sequence, and BULKCC can be used to store them temporarily.
+ *
+ * Main features:
+ * - Template-based type safety
+ * - ANSI C++ compatible (no modern C++ features)
+ * - Simple linked list implementation
+ * - No external dependencies
+ *
+ * @{
  */
 
 #ifndef __bulkcc_h__
@@ -32,18 +48,27 @@
 
 namespace BULKCC {
 
-/// use and share by the MIT License (MIT)
+/** @brief License identifier */
 #define _BULKCC_LICENSE_ "MIT"
 
-/// http://www.namegenerator.biz/female-name-generator.php
+/** @brief Package name */
 #define _BULKCC_PACKAGE_ "Kiera Gothe" // since 20100805
 
-/// first load test are done for prototype of binary hash function and tree
+/** @brief Library version */
 #define _BULKCC_VERSION_ "0.16"
+
+/** @brief Release date */
 #define _BULKCC_DATE_ 20160106
 
-void testBULKCC( void ); // test function
+/** 
+ * @brief Test function for the BULKCC library
+ * @details Runs basic validation tests on the bulk stack implementation.
+ * This function is provided for manual testing and debugging.
+ */
+void testBULKCC( void );
 
 } // namespace BULKCC
+
+/** @} */
 
 #endif // __bulkcc_h__

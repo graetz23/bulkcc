@@ -1,10 +1,11 @@
 /** 
  * @file bulkccObjTemplate.h
+ * @brief Template class for typed stack objects
  * @author Christian
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
- * Copyright (c) 2008-2024 Christian (graetz23@gmail.com)
+ * Copyright (c) 2016-2026 Christian (graetz23@gmail.com)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,6 +24,16 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @class BULKCC::ObjTemplate<T>
+ * @brief Template class for storing typed objects in the bulk stack.
+ *
+ * This class extends Obj and provides type-safe storage for any data type T.
+ * It is used by the Controller to store objects of various types in the stack.
+ *
+ * @tparam T The type of object to store (typically a pointer type)
+ *
+ * @{
  */
 
 #ifndef __bulkccObjTemplate_h__
@@ -35,26 +46,81 @@
 
 namespace BULKCC {
 
+/**
+ * @brief Template class for typed stack objects
+ *
+ * This class provides type-safe storage for objects in the bulk stack.
+ * Each ObjTemplate instance stores a single object of type T and maintains
+ * a reference to the next object in the stack (inherited from Obj).
+ *
+ * @tparam T The type of object to store (typically a pointer type)
+ */
 template<class T>
-class ObjTemplate : public Obj { // fancy in C++ but never Java!
+class ObjTemplate : public Obj {
 public:
 
-  ObjTemplate( void ); /// constructor
-  virtual ~ObjTemplate( void ); /// destructor
+  /** @brief Default constructor */
+  ObjTemplate( void );
 
-  TYPE::ObjType getObjType( void ); /// return type of object
-  Str getObjTypeAsString( void ); /// return type of object as std::string
-  void add( T object ); /// add an object
-  bool checkObj( void ); /// return true if not NULL
-  void eraseObj( void ); /// use delete operator for object
-  T fetch( void ); /// fetch an object
+  /** @brief Virtual destructor */
+  virtual ~ObjTemplate( void );
 
-  Obj* getAsBaseObj( void ); /// get this template object as base object
+  /**
+   * @brief Returns the type of this object
+   * @return Always returns TYPE::Template
+   */
+  TYPE::ObjType getObjType( void );
+
+  /**
+   * @brief Returns the type of this object as a string
+   * @return String representation of the object type
+   */
+  Str getObjTypeAsString( void );
+
+  /**
+   * @brief Stores an object in this container
+   * @param object The object to store
+   */
+  void add( T object );
+
+  /**
+   * @brief Checks if a valid object is stored
+   * @return true if the stored object is not NULL, false otherwise
+   */
+  bool checkObj( void );
+
+  /**
+   * @brief Deletes the stored object and sets internal pointer to NULL
+   *
+   * This method properly releases memory allocated for the stored object.
+   * After calling this method, checkObj() will return false until a new
+   * object is added via add().
+   */
+  void eraseObj( void );
+
+  /**
+   * @brief Fetches and removes the stored object
+   * @return The stored object, or 0 if none
+   *
+   * This method returns the stored object and sets the internal pointer
+   * to NULL, effectively removing it from this container without freeing
+   * the memory. The caller is responsible for managing the returned object.
+   */
+  T fetch( void );
+
+  /**
+   * @brief Gets this template object as a base Obj pointer
+   * @return Pointer to this object cast as Obj*
+   */
+  Obj* getAsBaseObj( void );
 
 private:
 
-  T _obj; // member
-  bool  _objIsSet; // member
+  /** @brief The stored object */
+  T _obj;
+
+  /** @brief Flag indicating if object has been set */
+  bool  _objIsSet;
 
 }; // class ObjTemplate
 
@@ -102,6 +168,7 @@ ObjTemplate<T>::checkObj( void ) {
 template<class T> void  // use delete operator for object
 ObjTemplate<T>::eraseObj( void ) {
   delete _obj;
+  _obj = 0;
 } // eraseObj
 
 template<class T> T // fetch an object

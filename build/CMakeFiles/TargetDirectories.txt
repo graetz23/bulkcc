@@ -1,0 +1,10 @@
+/home/chda/source/bulkcc/build/CMakeFiles/bulkcc.dir
+/home/chda/source/bulkcc/build/CMakeFiles/bulkcc_test.dir
+/home/chda/source/bulkcc/build/CMakeFiles/edit_cache.dir
+/home/chda/source/bulkcc/build/CMakeFiles/rebuild_cache.dir
+/home/chda/source/bulkcc/build/_deps/acutest-build/CMakeFiles/edit_cache.dir
+/home/chda/source/bulkcc/build/_deps/acutest-build/CMakeFiles/rebuild_cache.dir
+/home/chda/source/bulkcc/build/_deps/acutest-build/examples/CMakeFiles/c-example.dir
+/home/chda/source/bulkcc/build/_deps/acutest-build/examples/CMakeFiles/cpp-example.dir
+/home/chda/source/bulkcc/build/_deps/acutest-build/examples/CMakeFiles/edit_cache.dir
+/home/chda/source/bulkcc/build/_deps/acutest-build/examples/CMakeFiles/rebuild_cache.dir
