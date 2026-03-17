@@ -29,6 +29,13 @@
 
 namespace BULKCC {
 
+/**
+ * @brief Test function demonstrating BULKCC library functionality
+ *
+ * This function performs a comprehensive test of the BULKCC library,
+ * including adding objects of different types, searching, fetching,
+ * and cleaning up resources.
+ */
 void // test function
 testBULKCC( void ) {
 

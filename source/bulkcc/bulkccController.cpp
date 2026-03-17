@@ -30,13 +30,33 @@
 namespace BULKCC {
 
 // constructor
+/**
+ * @brief Default constructor
+ *
+ * Initializes a new Controller instance.
+ */
 Controller::Controller( void ) {
 } // Controller
 
 // destructor
+/**
+ * @brief Destructor
+ *
+ * Cleans up the Controller. Note: Does NOT automatically clean or erase
+ * any stacks or objects. You must call erase() or clean() on any active
+ * stacks before destroying the Controller.
+ */
 Controller::~Controller( void ) {
 } // ~Controller
 
+/**
+ * @brief Erase all stack nodes
+ *
+ * Deletes all stack nodes in the linked list, including the internal
+ * storage for each node. This completely removes the stack structure.
+ *
+ * @param obj Pointer to the head of the stack (Obj*)
+ */
 void // erase a Obj object
 Controller::erase( Obj* obj ) {
   Obj* lastObj = obj;
@@ -52,6 +72,15 @@ Controller::erase( Obj* obj ) {
   } // while
 } // erase
 
+/**
+ * @brief Clean all stored objects from the stack
+ *
+ * Deletes all objects stored in the stack nodes but keeps the stack
+ * structure intact. After cleaning, the stack nodes remain but contain
+ * no objects.
+ *
+ * @param obj Pointer to the head of the stack (Obj*)
+ */
 void // erase all object added in Obj object
 Controller::clean( Obj* obj ) {
   Obj* lastObj = obj;

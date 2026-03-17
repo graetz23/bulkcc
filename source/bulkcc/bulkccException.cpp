@@ -1,6 +1,7 @@
 /** 
- * @file bulkccException.h
- * @author Christian
+ * @file bulkccException.cpp
+ * @brief Implementation of Exception class for BULKCC library errors
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -29,13 +30,30 @@
 
 namespace BULKCC {
 
+/**
+ * @brief Constructor with message
+ *
+ * Creates an exception with the specified error message.
+ *
+ * @param msg The error message to store
+ */
 Exception::Exception( Str msg ) {
  _msg = msg;
 } // Exception
 
+/**
+ * @brief Destructor
+ */
 Exception::~Exception( void ) {
 } // ~Exception
 
+/**
+ * @brief Get error message
+ *
+ * Returns a C-string describing the error.
+ *
+ * @return const char* Error message
+ */
 const char* 
 Exception::what( void ) const {
   return (char*)(_msg.c_str( ));

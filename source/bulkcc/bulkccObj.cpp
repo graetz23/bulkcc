@@ -31,19 +31,43 @@ namespace BULKCC {
 
 // /// //// PUBLIC //// /// //
 // constructor
+/**
+ * @brief Default constructor
+ *
+ * Initializes the stack node with no next node (null pointer).
+ */
 Obj::Obj( void ) {
   _nextObj = 0;
 } // Obj
 
 // destructor
+/**
+ * @brief Virtual destructor
+ *
+ * Ensures proper cleanup of derived classes.
+ */
 Obj::~Obj( void ) {
 } // ~Obj
 
+/**
+ * @brief Set the next node in the stack
+ *
+ * Links this node to another node, creating a chain in the stack.
+ *
+ * @param obj Reference to the next node pointer
+ */
 void // glue an Obj object to this object
 Obj::setNextObj( Obj*& obj ) {
   this->_nextObj = obj;
 } // glueObj
 
+/**
+ * @brief Get the next node in the stack
+ *
+ * Returns a pointer to the next node in the stack.
+ *
+ * @return Obj* Pointer to next node, or 0 if none
+ */
 Obj* // return member of type Obj*
 Obj::getNextObj( void ) {
   return _nextObj;

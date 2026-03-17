@@ -30,10 +30,11 @@
 #define __bulkccController_h__
 
 #include "./bulkccObjTemplate.h" // BULKCC::ObjTemplate
+#include "./bulkccStack.h" // BULKCC::Stack
 
 namespace BULKCC {
 
-#define _VERSION_BULKCC_Controller_ 0.16 // 20141231
+#define _VERSION_BULKCC_Controller_ 1.0
 // #define _DEBUG_BULKCC_Controller_
 
 /**
@@ -50,21 +51,39 @@ namespace BULKCC {
  * template-based operations that allow you to work with any data type while
  * maintaining type safety through the stack mechanism.
  *
+ * @section new_api New API (Recommended)
+ *
+ * The new Stack class provides better performance and thread safety:
+ * - push<T>(data) - Add object to stack
+ * - pop<T>() - Remove and return object
+ * - peek<T>() - View top object
+ * - count<T>() - O(1) count (uses internal size tracker)
+ * - findAll<T>() - Get all objects of type
+ * - empty() - Check if empty
+ * - size() - O(1) size
+ *
  * @section operations Supported Operations
  *
- * - add(): Add new objects to the stack
- * - search(): Find objects of a specific type
- * - fetch(): Retrieve and remove objects from the stack
- * - list(): Get all objects of a specific type as an array
+ * - add(): Add new objects to the stack (DEPRECATED - use push)
+ * - search(): Find objects of a specific type (DEPRECATED - use count)
+ * - fetch(): Retrieve and remove objects from the stack (DEPRECATED - use pop)
+ * - list(): Get all objects of a specific type as an array (DEPRECATED - use findAll)
  * - clean(): Remove all stored objects (not the stack nodes)
  * - erase(): Remove the entire stack including nodes
  *
  * @section example Example Usage
  *
  * @code
- * BULKCC::Controller controller;
+ * // NEW API (recommended)
+ * BULKCC::Stack stack;
+ * stack.push<MyClass*>(new MyClass());
+ * stack.push<MyClass*>(new MyClass());
  *
- * // Add first object
+ * size_t count = stack.count<MyClass*>(); // O(1)!
+ * MyClass* obj = stack.pop<MyClass*>();
+ *
+ * // Old API (deprecated)
+ * BULKCC::Controller controller;
  * MyClass* obj1 = new MyClass();
  * BULKCC::Obj* stack = controller.add<MyClass*>(obj1);
  *
@@ -90,6 +109,9 @@ namespace BULKCC {
  *
  * @see Obj
  * @see ObjTemplate
+ * @see Stack
+ * @see StackGuard
+ * @see Iterator
  */
 class Controller {
   public:
@@ -300,6 +322,8 @@ class Controller {
      * @throws Exception if unknown object type is requested
      */
     template< class T > Obj* create( TYPE::ObjType objType );
+
+    Stack _stack;
 
 };
 // class Controller

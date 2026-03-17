@@ -53,7 +53,10 @@
 #ifndef __bulkcc_h__
 #define __bulkcc_h__
 
-#include "./bulkccController.h" // BULKCC::Controller
+#include "./bulkccController.h"
+#include "./bulkccStack.h"
+#include "./bulkccIterator.h"
+#include "./bulkccStackGuard.h"
 
 namespace BULKCC {
 
@@ -64,10 +67,13 @@ namespace BULKCC {
 #define _BULKCC_PACKAGE_ "Kiera Gothe" // since 20100805
 
 /// first load test are done for prototype of binary hash function and tree
-#define _BULKCC_VERSION_ "0.16"
-#define _BULKCC_DATE_ 20160106
+#define _BULKCC_VERSION_ "1.0"
+#define _BULKCC_DATE_ 20250317
 
-void testBULKCC( void ); // test function
+/**
+ * @brief Test function demonstrating BULKCC library functionality
+ */
+void testBULKCC( void );
 
 } // namespace BULKCC
 
