@@ -1,0 +1,22 @@
+Start testing: Mar 17 16:05 CET
+----------------------------------------------------------
+1/1 Testing: bulkcc_tests
+1/1 Test: bulkcc_tests
+Command: "/home/chda/source/opencode/bulkcc/build/bulkcc_tests"
+Directory: /home/chda/source/opencode/bulkcc/build
+"bulkcc_tests" start time: Mar 17 16:05 CET
+Output:
+----------------------------------------------------------
+Randomness seeded to: 389125400
+===============================================================================
+All tests passed (26 assertions in 17 test cases)
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"bulkcc_tests" end time: Mar 17 16:05 CET
+"bulkcc_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 17 16:05 CET

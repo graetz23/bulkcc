@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="group__BULKCC" kind="group">
+    <compoundname>BULKCC</compoundname>
+    <title>BULKCC Library</title>
+    <briefdescription>
+<para>A generic bulk container library for managing heterogeneous object stacks. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="namespaceBULKCC" kindref="compound">BULKCC</ref> (Bulk Container) is a C++98-compatible template library that provides a flexible mechanism for managing collections of objects of different types in a linked-list style stack structure.</para>
+<sect1 id="group__BULKCC_1features">
+<title>Key Features</title>
+<para><itemizedlist>
+<listitem><para>Type-safe generic container for any object type</para>
+</listitem><listitem><para>Linked-list based stack implementation</para>
+</listitem><listitem><para>Search, fetch, and list operations</para>
+</listitem><listitem><para>Automatic memory management</para>
+</listitem><listitem><para>C++98 compatible (no modern C++ features required)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="group__BULKCC_1usage">
+<title>Basic Usage</title>
+<para><programlisting><codeline><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bulkcc_8h" kindref="compound">bulkcc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classBULKCC_1_1Controller" kindref="compound">BULKCC::Controller</ref><sp/>controller;</highlight></codeline>
+<codeline><highlight class="normal">MyClass*<sp/>obj<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyClass();</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classBULKCC_1_1Obj" kindref="compound">BULKCC::Obj</ref>*<sp/>stack<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;MyClass*&gt;(obj);</highlight></codeline>
+<codeline><highlight class="normal">controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;MyClass*&gt;(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>MyClass(),<sp/>stack);</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,6 +1,7 @@
-/** 
+/**
  * @file bulkccTypeObjTypes.h
- * @author Christian
+ * @brief Type definitions for object types in BULKCC
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -35,8 +36,21 @@ namespace BULKCC {
 
 namespace TYPE {
 
+/**
+ * @namespace BULKCC::TYPE
+ * @brief Type namespace containing object type enumerations
+ *
+ * This namespace contains type definitions used throughout the BULKCC library.
+ */
+
+/**
+ * @enum ObjType
+ * @brief Enumeration of object types in BULKCC
+ *
+ * Defines the different types of objects that can be stored in the stack.
+ */
 enum ObjType {
-  Template = 0
+  Template = 0  ///< Template-based object type
 }; // enum ObjType
 
 } // namespace TYPE

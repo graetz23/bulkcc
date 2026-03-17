@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classBULKCC_1_1Exception" kind="class" language="C++" prot="public">
+    <compoundname>BULKCC::Exception</compoundname>
+    <includes refid="bulkccException_8h" local="no">bulkccException.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classBULKCC_1_1Exception_1ad35caf48473103ac4ef2351a54b74223" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespaceBULKCC_1a9e0c8d565cdcc41930e46e72c7d15574" kindref="member">Str</ref></type>
+        <definition>Str BULKCC::Exception::_msg</definition>
+        <argsstring></argsstring>
+        <name>_msg</name>
+        <qualifiedname>BULKCC::Exception::_msg</qualifiedname>
+        <briefdescription>
+<para>Stored exception message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccException.h" line="86" column="7" bodyfile="source/bulkcc/bulkccException.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBULKCC_1_1Exception_1a0d8e455098dc9390664a74d6f4df5e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BULKCC::Exception::Exception</definition>
+        <argsstring>(Str msg)</argsstring>
+        <name>Exception</name>
+        <qualifiedname>BULKCC::Exception::Exception</qualifiedname>
+        <param>
+          <type><ref refid="namespaceBULKCC_1a9e0c8d565cdcc41930e46e72c7d15574" kindref="member">Str</ref></type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an exception with the specified error message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error message to store </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccException.h" line="68" column="3" bodyfile="source/bulkcc/bulkccException.cpp" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Exception_1a90844b054ff8a88c770a92a270793067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BULKCC::Exception::~Exception</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Exception</name>
+        <qualifiedname>BULKCC::Exception::~Exception</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccException.h" line="73" column="3" bodyfile="source/bulkcc/bulkccException.cpp" bodystart="36" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Exception_1ad2023c5bc3c02a328d4074607d769eba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * BULKCC::Exception::what</definition>
+        <argsstring>(void) const</argsstring>
+        <name>what</name>
+        <qualifiedname>BULKCC::Exception::what</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get error message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a C-string describing the error.</para>
+<para><simplesect kind="return"><para>const char* Error message </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccException.h" line="82" column="14" bodyfile="source/bulkcc/bulkccException.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classBULKCC_1_1Exception" kindref="compound">Exception</ref> class for <ref refid="namespaceBULKCC" kindref="compound">BULKCC</ref> library errors. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classBULKCC_1_1Exception" kindref="compound">Exception</ref> class provides a simple mechanism for reporting errors within the <ref refid="namespaceBULKCC" kindref="compound">BULKCC</ref> library. It stores an error message that can be retrieved using the <ref refid="classBULKCC_1_1Exception_1ad2023c5bc3c02a328d4074607d769eba" kindref="member">what()</ref> method.</para>
+<sect1 id="group__BULKCC_1usage">
+<title>Basic Usage</title>
+<para><programlisting><codeline><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Code<sp/>that<sp/>might<sp/>throw<sp/>an<sp/>exception</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classBULKCC_1_1Exception" kindref="compound">BULKCC::Exception</ref>(</highlight><highlight class="stringliteral">&quot;Something<sp/>went<sp/>wrong&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(<ref refid="classBULKCC_1_1Exception" kindref="compound">BULKCC::Exception</ref>&amp;<sp/>e)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>e.<ref refid="classBULKCC_1_1Exception_1ad2023c5bc3c02a328d4074607d769eba" kindref="member">what</ref>()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="source/bulkcc/bulkccException.h" line="58" column="1" bodyfile="source/bulkcc/bulkccException.h" bodystart="58" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classBULKCC_1_1Exception_1ad35caf48473103ac4ef2351a54b74223" prot="protected" virt="non-virtual"><scope>BULKCC::Exception</scope><name>_msg</name></member>
+      <member refid="classBULKCC_1_1Exception_1a0d8e455098dc9390664a74d6f4df5e3e" prot="public" virt="non-virtual"><scope>BULKCC::Exception</scope><name>Exception</name></member>
+      <member refid="classBULKCC_1_1Exception_1ad2023c5bc3c02a328d4074607d769eba" prot="public" virt="non-virtual"><scope>BULKCC::Exception</scope><name>what</name></member>
+      <member refid="classBULKCC_1_1Exception_1a90844b054ff8a88c770a92a270793067" prot="public" virt="non-virtual"><scope>BULKCC::Exception</scope><name>~Exception</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

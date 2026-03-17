@@ -1,91 +1,174 @@
-## BULKCC is a C++ bulk stack implementation ##
+# BULKCC - Bulk Container Library
 
-BULKCC is an object-oriented C++ template based _stack_ for storing any _type_ of
-data. 
+```
+       BULKCC - Bulk Container Library
+       ================================
 
-Directly after some parsing method, while the parser or a tokenizer generates
-_typed_ data or objects in unknown sequence, BULKCC can be used to store those.
-Thereby, the typed data / objects are pushed in (unkown) sequence into BULKCC.
+                    +---------------+
+                    |   STACK       |
+                    |   (Top)       |
+           +--------|    [Obj3]     |--------+
+           |        +---------------+        |
+           |                |                |
+           v                v                v
+    +------------+   +------------+   +------------+
+    |   [Obj2]   |   |   [Obj1]   |   |   [Obj0]   |
+    +------------+   +------------+   +------------+
+          |                |                |
+          v                v                v
+    +------------+   +------------+   +------------+
+    |  <T>* obj  |   |  <T>* obj  |   |  <T>* obj  |
+    +------------+   +------------+   +------------+
 
-BULKCC allows for searching by data / objects by its type or reading the
-- yet known - sequence, poping them of the stack, as pushed in; _first in, first out_.
 
-BLUKCC's implementation separates the template based methods for handling the stack
-from storing the _typed_ data or object. Therefore the stack consists of a
-non-template base class, where a template class derives. However, a controller
-class implements the necessary template functionality for handling the stack.
-The stack itself is an infinite pointer refrenced list.
+       How the stack grows when you add items:
 
-Have fun. ~8>
+       Initial:                    After add(item1):
+       +--------+                   +--------+
+       | nullptr|                   | item1  | <- top
+       +--------+                   +--------+
 
-### License ###
+       After add(item2):             After add(item3):
+       +--------+                   +--------+
+       | item2  | <- top             | item3  | <- top
+       +--------+                   +--------+
+       | item1  |                   | item2  |
+       +--------+                   +--------+
+                                   | item1  |
+                                   +--------+
+```
 
-**BULKCC is distributed under the MIT License (MIT); this file is part of.**
+## Overview
 
-**Copyright (c) 2008-2024 Christian (graetz23@gmail.com)**
+BULKCC (Bulk Container) is a C++98-compatible generic container library that provides flexible management of heterogeneous object stacks. It allows you to store and manage collections of different object types in a linked-list based stack structure.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Author
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+**Christian** (graetz23@gmail.com)
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+## Version
 
-### Version ###
+0.16 (2016-01-06)
 
-**BULKCC Version 0.16 20160106**
+## Key Advantages
 
-### Change Log ###
+- **C++98 Compatible**: Works with legacy C++ codebases - no modern C++ features required
+- **Type-Safe**: Template-based design ensures type safety at compile time
+- **Heterogeneous Storage**: Store objects of different types in the same stack
+- **Flexible Operations**: Search, fetch, and list objects by type
+- **Linked-List Design**: Efficient insertion at the top of the stack (O(1))
+- **Memory Management**: Clean and erase methods for proper cleanup
+- **Lightweight**: Minimal dependencies, no external libraries required
+- **Exception Handling**: Custom exception class for error reporting
 
-2020030 version 0.16 :
-- updated contact information
+## Architecture
 
-20160106 version 0.16 :
-- cleaned code due to old MSVS stuff ..
-- updated the years of the Copyright by 2008-2018
+The library consists of four main components:
 
-20141231 version 0.15 :
-- changed to the MIT License (MIT)
-- pushed to https://github.com/graetz23/blukcc for development
+| Class | Purpose |
+|-------|---------|
+| `Controller` | Main interface for managing stacks |
+| `Obj` | Abstract base class for stack nodes |
+| `ObjTemplate<T>` | Template class for type-specific nodes |
+| `Exception` | Error reporting |
 
-20120430 version 0.14 :
-- changed copyright towards 2012 and removed old email address
-- reconfigured visual studio project due to executing file for debug
-- TODO: deleting seems to run to infinty; fix this!
+## Simple Application Example
 
-20100807 version 0.13 :
-- added common header file for including STL lib and set common typedefs
+```cpp
+#include "bulkcc.h"
+#include <iostream>
+#include <string>
 
-20100805 version 0.12 :
-- tested for Microsoft Windows 7 using MS Visual Studio 2005
-- tested for GNU/Linux debian 5.0 kernel 2.6.26-2-686 using GNU/g++/gcc 4.3.2
-- added readMe.txt
-- added Makefile
+int main() {
+    // Create a controller to manage your stack
+    BULKCC::Controller controller;
 
-20100805 version 0.11 :
-- renamed all files
-- renamed all classes
-- added defines
+    // Add some objects to the stack
+    std::string* str1 = new std::string("Hello");
+    std::string* str2 = new std::string("World");
+    std::exception* exc1 = new std::exception();
 
-20100805 version 0.10 :
-- renamed to Catalogs:: to BULKCC::
-- released BULKCC:: under Apache License, Version 2.0
-- created Microsoft Visual Studio 2005 Project
-- added version and dates
-- added package name as Kiera Gothe
+    // Create the stack with first object
+    BULKCC::Obj* stack = controller.add<std::string*>(str1);
 
-20080118 version 0.01 :
-- implemented complete project as Catalogs:: and tested it
+    // Add more objects to the stack
+    controller.add<std::string*>(str2, stack);
+    controller.add<std::exception*>(exc1, stack);
 
-/******************************************************************************/
+    // Search for objects of a specific type
+    int stringCount = controller.search<std::string*>(stack);
+    int excCount = controller.search<std::exception*>(stack);
+
+    std::cout << "Found " << stringCount << " strings" << std::endl;
+    std::cout << "Found " << excCount << " exceptions" << std::endl;
+
+    // Fetch an object (removes it from stack)
+    std::string* fetched = controller.fetch<std::string*>(stack);
+    if (fetched) {
+        std::cout << "Fetched: " << *fetched << std::endl;
+        delete fetched;
+    }
+
+    // Get all remaining strings as an array
+    int remaining = controller.search<std::string*>(stack);
+    std::string** list = controller.list<std::string*>(stack);
+
+    // Clean up the list
+    for (int i = 0; i < remaining; i++) {
+        delete list[i];
+    }
+    delete[] list;
+
+    // Clean all stored objects (but keep stack structure)
+    controller.clean(stack);
+
+    // Erase the entire stack (delete all nodes)
+    controller.erase(stack);
+
+    std::cout << "Done!" << std::endl;
+    return 0;
+}
+```
+
+## Building
+
+### Prerequisites
+
+- CMake 3.14+
+- Ninja build tool
+- C++ compiler (GCC/Clang)
+
+### Build Commands
+
+```bash
+# Configure and build (Debug)
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug
+
+# Build all targets
+ninja -C build
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+ctest --test-dir build --output-on-failure
+
+# Run with verbose output
+./build/bulkcc_tests -s
+```
+
+## Documentation
+
+HTML documentation is available in the `doc/html/` directory. Open `index.html` in a web browser to view.
+
+## License
+
+BULKCC is distributed under the **MIT License (MIT)**.
+
+See [LICENSE.md](LICENSE.md) for full license text.
+
+## GitHub Repository
+
+For the latest version, bug reports, and feature requests, visit:
+https://github.com/anomalyco/bulkcc

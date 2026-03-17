@@ -1,6 +1,7 @@
-/** 
+/**
  * @file bulkcc.h
- * @author Christian
+ * @brief Main include file for BULKCC - A Generic Bulk Container Library
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -23,6 +24,30 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @defgroup BULKCC BULKCC Library
+ * @brief A generic bulk container library for managing heterogeneous object stacks
+ *
+ * BULKCC (Bulk Container) is a C++98-compatible template library that provides
+ * a flexible mechanism for managing collections of objects of different types
+ * in a linked-list style stack structure.
+ *
+ * @section features Key Features
+ * - Type-safe generic container for any object type
+ * - Linked-list based stack implementation
+ * - Search, fetch, and list operations
+ * - Automatic memory management
+ * - C++98 compatible (no modern C++ features required)
+ *
+ * @section usage Basic Usage
+ * @code
+ * #include "bulkcc.h"
+ *
+ * BULKCC::Controller controller;
+ * MyClass* obj = new MyClass();
+ * BULKCC::Obj* stack = controller.add<MyClass*>(obj);
+ * controller.add<MyClass*>(new MyClass(), stack);
+ * @endcode
  */
 
 #ifndef __bulkcc_h__

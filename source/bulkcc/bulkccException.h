@@ -1,6 +1,7 @@
-/** 
+/**
  * @file bulkccException.h
- * @author Christian
+ * @brief Exception class for BULKCC library errors
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -35,17 +36,54 @@ namespace BULKCC {
 #define _VERSION_BULKCC_Exception_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_Exception_
 
+/**
+ * @class Exception
+ * @brief Exception class for BULKCC library errors
+ *
+ * The Exception class provides a simple mechanism for reporting errors
+ * within the BULKCC library. It stores an error message that can be
+ * retrieved using the what() method.
+ *
+ * @section usage Usage
+ *
+ * @code
+ * try {
+ *     // Code that might throw an exception
+ *     throw BULKCC::Exception("Something went wrong");
+ * } catch (BULKCC::Exception& e) {
+ *     std::cout << "Error: " << e.what() << std::endl;
+ * }
+ * @endcode
+ */
 class Exception {
  public:
 
-  Exception( Str msg ); /// constructor
-  ~Exception( void ); /// destructor
+  /**
+   * @brief Constructor with message
+   *
+   * Creates an exception with the specified error message.
+   *
+   * @param msg The error message to store
+   */
+  Exception( Str msg );
 
-  const char* what( void ) const; /// what
+  /**
+   * @brief Destructor
+   */
+  ~Exception( void );
+
+  /**
+   * @brief Get error message
+   *
+   * Returns a C-string describing the error.
+   *
+   * @return const char* Error message
+   */
+  const char* what( void ) const;
 
  protected:
- 
-  Str _msg; /// stored exception message
+  
+  Str _msg; ///< Stored exception message
 
 }; // class Exception 
 

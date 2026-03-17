@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classBULKCC_1_1Obj" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>BULKCC::Obj</compoundname>
+    <derivedcompoundref refid="classBULKCC_1_1ObjTemplate" prot="public" virt="non-virtual">BULKCC::ObjTemplate&lt; T &gt;</derivedcompoundref>
+    <includes refid="bulkccObj_8h" local="no">bulkccObj.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBULKCC_1_1Obj_1ad15ce816969a7a38420528717709cf20" prot="private" static="no" mutable="no">
+        <type><ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> *</type>
+        <definition>Obj* BULKCC::Obj::_nextObj</definition>
+        <argsstring></argsstring>
+        <name>_nextObj</name>
+        <qualifiedname>BULKCC::Obj::_nextObj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="151" column="7" bodyfile="source/bulkcc/bulkccObj.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1a6dae7b983bcd3bcf5008311f14099392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BULKCC::Obj::Obj</definition>
+        <argsstring>(void)</argsstring>
+        <name>Obj</name>
+        <qualifiedname>BULKCC::Obj::Obj</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the stack node with no next node (null pointer). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="78" column="3" bodyfile="source/bulkcc/bulkccObj.cpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1ad1a2509f8bf1ec9b3dfa299ab6e7f2ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>BULKCC::Obj::~Obj</definition>
+        <argsstring>(void)</argsstring>
+        <name>~Obj</name>
+        <qualifiedname>BULKCC::Obj::~Obj</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Virtual destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensures proper cleanup of derived classes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="85" column="11" bodyfile="source/bulkcc/bulkccObj.cpp" bodystart="39" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1ae9e5617c496d2e709faa9a7700313df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceBULKCC_1_1TYPE_1a8b3689bf9aeeb04e0732fa3ffdbd9d4d" kindref="member">TYPE::ObjType</ref></type>
+        <definition>virtual TYPE::ObjType BULKCC::Obj::getObjType</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>getObjType</name>
+        <qualifiedname>BULKCC::Obj::getObjType</qualifiedname>
+        <reimplementedby refid="classBULKCC_1_1ObjTemplate_1aefde72de3cab7bd55b3d2a60c981dd43">getObjType</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the object type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the type identifier for this stack node.</para>
+<para><simplesect kind="return"><para><ref refid="namespaceBULKCC_1_1TYPE_1a8b3689bf9aeeb04e0732fa3ffdbd9d4d" kindref="member">TYPE::ObjType</ref> The type of this object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="94" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1a078d550c8bef95446263441cb1357dec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespaceBULKCC_1a9e0c8d565cdcc41930e46e72c7d15574" kindref="member">Str</ref></type>
+        <definition>virtual Str BULKCC::Obj::getObjTypeAsString</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>getObjTypeAsString</name>
+        <qualifiedname>BULKCC::Obj::getObjTypeAsString</qualifiedname>
+        <reimplementedby refid="classBULKCC_1_1ObjTemplate_1a41806ab98e008205f5747e2657ad031e">getObjTypeAsString</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the object type as string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representation of the object type.</para>
+<para><simplesect kind="return"><para>Str The type as a string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="103" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1ad3dfb99e011da7b7b87e235725cdae0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> *</type>
+        <definition>virtual Obj * BULKCC::Obj::getAsBaseObj</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>getAsBaseObj</name>
+        <qualifiedname>BULKCC::Obj::getAsBaseObj</qualifiedname>
+        <reimplementedby refid="classBULKCC_1_1ObjTemplate_1ad3cc786c1f34790769fa1209e7fe010b">getAsBaseObj</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get this node as base <ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to this object cast to the base <ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> type.</para>
+<para><simplesect kind="return"><para>Obj* Pointer to this as base class </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="112" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1ad13c9da1054b70c5099301a2f4173f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool BULKCC::Obj::checkObj</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>checkObj</name>
+        <qualifiedname>BULKCC::Obj::checkObj</qualifiedname>
+        <reimplementedby refid="classBULKCC_1_1ObjTemplate_1ad9b29c73d9800127d9a45e38ec4310b4">checkObj</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Check if this node contains an object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines whether this stack node currently holds a non-null object.</para>
+<para><simplesect kind="return"><para>true if a valid object is stored, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="121" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1a4bf9758000c0d03ddb10e908ac78ddc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void BULKCC::Obj::eraseObj</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>eraseObj</name>
+        <qualifiedname>BULKCC::Obj::eraseObj</qualifiedname>
+        <reimplementedby refid="classBULKCC_1_1ObjTemplate_1a8c57d27b77e15e0a44c5a1328888ca7c">eraseObj</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Delete the stored object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Deletes the object stored in this node and sets the internal pointer to null. Does not delete the node itself. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="129" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1af0c7f4cbc7ae63a1f9daac3706d15c24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BULKCC::Obj::setNextObj</definition>
+        <argsstring>(Obj *&amp;obj)</argsstring>
+        <name>setNextObj</name>
+        <qualifiedname>BULKCC::Obj::setNextObj</qualifiedname>
+        <param>
+          <type><ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> *&amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Set the next node in the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Links this node to another node, creating a chain in the stack.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the next node pointer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="138" column="8" bodyfile="source/bulkcc/bulkccObj.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classBULKCC_1_1Obj_1a34749a6ea901636158b239979c9a468f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> *</type>
+        <definition>Obj * BULKCC::Obj::getNextObj</definition>
+        <argsstring>(void)</argsstring>
+        <name>getNextObj</name>
+        <qualifiedname>BULKCC::Obj::getNextObj</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the next node in the stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to the next node in the stack.</para>
+<para><simplesect kind="return"><para>Obj* Pointer to next node, or 0 if none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkccObj.h" line="147" column="7" bodyfile="source/bulkcc/bulkccObj.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Abstract base class for stack nodes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref> class is the abstract base class for all stack nodes in the <ref refid="namespaceBULKCC" kindref="compound">BULKCC</ref> library. It provides the fundamental linked-list structure for storing objects in a stack.</para>
+<sect1 id="classBULKCC_1_1Obj_1design">
+<title>Design</title>
+<para>Each stack node contains:<itemizedlist>
+<listitem><para>A pointer to the next node in the stack (_nextObj)</para>
+</listitem><listitem><para>Virtual methods for type identification and object management</para>
+</listitem></itemizedlist>
+</para>
+<para>This class cannot be instantiated directly. Use ObjTemplate&lt;T&gt; to create concrete stack nodes that can store objects of a specific type.</para>
+</sect1>
+<sect1 id="group__BULKCC_1usage">
+<title>Basic Usage</title>
+<para>This class is typically not used directly. Instead, use the <ref refid="classBULKCC_1_1Controller" kindref="compound">Controller</ref> class to manage stacks:</para>
+<para><programlisting><codeline><highlight class="normal"><ref refid="classBULKCC_1_1Controller" kindref="compound">BULKCC::Controller</ref><sp/>controller;</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classBULKCC_1_1Obj" kindref="compound">BULKCC::Obj</ref>*<sp/>stack<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;MyType*&gt;(myObject);</highlight></codeline>
+</programlisting></para>
+<para><simplesect kind="see"><para><ref refid="classBULKCC_1_1Controller" kindref="compound">Controller</ref> </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classBULKCC_1_1ObjTemplate" kindref="compound">ObjTemplate</ref> </para>
+</simplesect>
+</para>
+</sect1>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BULKCC::Obj</label>
+        <link refid="classBULKCC_1_1Obj"/>
+      </node>
+      <node id="2">
+        <label>BULKCC::ObjTemplate&lt; T &gt;</label>
+        <link refid="classBULKCC_1_1ObjTemplate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BULKCC::Obj</label>
+        <link refid="classBULKCC_1_1Obj"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>_nextObj</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/bulkcc/bulkccObj.h" line="70" column="1" bodyfile="source/bulkcc/bulkccObj.h" bodystart="70" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classBULKCC_1_1Obj_1ad15ce816969a7a38420528717709cf20" prot="private" virt="non-virtual"><scope>BULKCC::Obj</scope><name>_nextObj</name></member>
+      <member refid="classBULKCC_1_1Obj_1ad13c9da1054b70c5099301a2f4173f43" prot="public" virt="pure-virtual"><scope>BULKCC::Obj</scope><name>checkObj</name></member>
+      <member refid="classBULKCC_1_1Obj_1a4bf9758000c0d03ddb10e908ac78ddc6" prot="public" virt="pure-virtual"><scope>BULKCC::Obj</scope><name>eraseObj</name></member>
+      <member refid="classBULKCC_1_1Obj_1ad3dfb99e011da7b7b87e235725cdae0d" prot="public" virt="pure-virtual"><scope>BULKCC::Obj</scope><name>getAsBaseObj</name></member>
+      <member refid="classBULKCC_1_1Obj_1a34749a6ea901636158b239979c9a468f" prot="public" virt="non-virtual"><scope>BULKCC::Obj</scope><name>getNextObj</name></member>
+      <member refid="classBULKCC_1_1Obj_1ae9e5617c496d2e709faa9a7700313df4" prot="public" virt="pure-virtual"><scope>BULKCC::Obj</scope><name>getObjType</name></member>
+      <member refid="classBULKCC_1_1Obj_1a078d550c8bef95446263441cb1357dec" prot="public" virt="pure-virtual"><scope>BULKCC::Obj</scope><name>getObjTypeAsString</name></member>
+      <member refid="classBULKCC_1_1Obj_1a6dae7b983bcd3bcf5008311f14099392" prot="public" virt="non-virtual"><scope>BULKCC::Obj</scope><name>Obj</name></member>
+      <member refid="classBULKCC_1_1Obj_1af0c7f4cbc7ae63a1f9daac3706d15c24" prot="public" virt="non-virtual"><scope>BULKCC::Obj</scope><name>setNextObj</name></member>
+      <member refid="classBULKCC_1_1Obj_1ad1a2509f8bf1ec9b3dfa299ab6e7f2ee" prot="public" virt="virtual"><scope>BULKCC::Obj</scope><name>~Obj</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

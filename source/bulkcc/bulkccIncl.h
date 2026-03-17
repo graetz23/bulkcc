@@ -1,6 +1,7 @@
-/** 
+/**
  * @file bulkccIncl.h
- * @author Christian
+ * @brief Common includes and type definitions for BULKCC
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -23,6 +24,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @defgroup BULKCC_Internal Internal Utilities
+ * @brief Internal type definitions and includes
  */
 
 #ifndef __bulkccIncl_h__

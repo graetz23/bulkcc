@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="bulkcc_8cpp" kind="file" language="C++">
+    <compoundname>bulkcc.cpp</compoundname>
+    <includes refid="bulkcc_8h" local="yes">./bulkcc.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>source/bulkcc/bulkcc.cpp</label>
+        <link refid="bulkcc_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>./bulkcc.h</label>
+        <link refid="bulkcc_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>./bulkccController.h</label>
+        <link refid="bulkccController_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>./bulkccException.h</label>
+        <link refid="bulkccException_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>./bulkccIncl.h</label>
+        <link refid="bulkccIncl_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>./bulkccObj.h</label>
+        <link refid="bulkccObj_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>./bulkccObjTemplate.h</label>
+        <link refid="bulkccObjTemplate_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>./bulkccTypeObjTypes.h</label>
+        <link refid="bulkccTypeObjTypes_8h"/>
+      </node>
+      <node id="8">
+        <label>exception</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>typeinfo</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceBULKCC">BULKCC</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceBULKCC_1a5b6547a7e6fe75b53ed9c75722d55aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BULKCC::testBULKCC</definition>
+        <argsstring>(void)</argsstring>
+        <name>testBULKCC</name>
+        <qualifiedname>BULKCC::testBULKCC</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>kill all added objects</para>
+        </inbodydescription>
+        <location file="source/bulkcc/bulkcc.cpp" line="33" column="1" bodyfile="source/bulkcc/bulkcc.cpp" bodystart="33" bodyend="185" declfile="source/bulkcc/bulkcc.h" declline="70" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Christian</para>
+</simplesect>
+<ref refid="namespaceBULKCC" kindref="compound">BULKCC</ref> is distributed under the MIT License (MIT); this file is part of.</para>
+<para>Copyright (c) 2008-2024 Christian (<ulink url="mailto:graetz23@gmail.com">graetz23@gmail.com</ulink>)</para>
+<para>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</para>
+<para>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</para>
+<para>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bulkcc_8h" kindref="compound">./bulkcc.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="namespaceBULKCC" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceBULKCC" kindref="compound">BULKCC</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>test<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="namespaceBULKCC_1a5b6547a7e6fe75b53ed9c75722d55aad" kindref="member">testBULKCC</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>controller<sp/>keeps<sp/>the<sp/>the<sp/>templated<sp/>based<sp/>functions<sp/>for<sp/>the<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>object<sp/>template<sp/>list.<sp/>The<sp/>template<sp/>list<sp/>does<sp/>implement<sp/>any<sp/>functionality</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>has<sp/>a<sp/>native<sp/>base<sp/>class,<sp/>while<sp/>only<sp/>the<sp/>first<sp/>sub<sp/>class<sp/>implements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>template<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBULKCC_1_1Controller" kindref="compound">Controller</ref><sp/>controller;<sp/></highlight><highlight class="comment">//<sp/>use<sp/>template<sp/>methods<sp/>for<sp/>bulk<sp/>stack<sp/>template</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>some<sp/>complex<sp/>objects<sp/>for<sp/>testing<sp/>Obj<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>string1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<sp/></highlight><highlight class="stringliteral">&quot;first&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>string2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<sp/></highlight><highlight class="stringliteral">&quot;second&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>string3<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<sp/></highlight><highlight class="stringliteral">&quot;third&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::exception*<sp/>exception1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::exception(<sp/>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::exception*<sp/>exception2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::exception(<sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>std::exception*<sp/>exception3<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::exception(<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref>*<sp/>obj<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::exception*&gt;(<sp/>exception1<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::string*&gt;(<sp/>string1,<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::string*&gt;(<sp/>string2,<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::exception*&gt;(<sp/>exception2,<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::string*&gt;(<sp/>string3,<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::exception*&gt;(<sp/>exception3,<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>found<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a4fdd0ed5dcc258c66a5b3e2ab0b6755e" kindref="member">search</ref>&lt;std::exception*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;std::exception*<sp/>-&gt;<sp/>found:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>found<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a4fdd0ed5dcc258c66a5b3e2ab0b6755e" kindref="member">search</ref>&lt;std::string*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;std::string*<sp/>-&gt;<sp/>found:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>found<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>std::exception*<sp/>fetchedException<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::exception*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedException;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>fetchedException<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::exception*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedException;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>fetchedException<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::exception*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedException;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>fetched;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>fetchedString<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::string*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedString;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>fetchedString<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::string*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedString;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>fetchedString<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::string*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedString;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>some<sp/>tries<sp/>even<sp/>if<sp/>there<sp/>are<sp/>no<sp/>objects<sp/>left,<sp/>no<sp/>errors,<sp/>no<sp/>exceptions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>fetchedException<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::exception*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedException;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>fetchedString<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a33dfaea6b6fa02a45ccc7586ce885e19" kindref="member">fetch</ref>&lt;std::string*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fetchedString;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a4fdd0ed5dcc258c66a5b3e2ab0b6755e" kindref="member">search</ref>&lt;std::exception*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;std::exception*<sp/>-&gt;<sp/>found:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>found<sp/>&lt;&lt;<sp/>std::endl</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>found<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a4fdd0ed5dcc258c66a5b3e2ab0b6755e" kindref="member">search</ref>&lt;std::string*&gt;(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;std::string*<sp/>-&gt;<sp/>found:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>found<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>the<sp/>pointer<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1aecc8d782c6c028ee173cb8b4c45e9782" kindref="member">erase</ref>(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>automatic<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end<sp/>=<sp/>500000;<sp/></highlight><highlight class="comment">//<sp/>will<sp/>be<sp/>one<sp/>million<sp/>and<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string*<sp/>str1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBULKCC_1_1Obj" kindref="compound">Obj</ref>*<sp/>cObj<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::string*&gt;(<sp/>str1<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;long<sp/>long<sp/>list<sp/>with:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(end*2)+1<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>elements&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>end;<sp/>i++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string*<sp/>str<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::string(<sp/>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::exception*<sp/>exc<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>std::exception(<sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::string*&gt;(<sp/>str,<sp/>cObj<sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a20c5e4e20cc7b8f7cf5a5c8f0375327a" kindref="member">add</ref>&lt;std::exception*&gt;(<sp/>exc,<sp/>cObj<sp/>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>i<sp/>till<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>convert<sp/>half<sp/>of<sp/>complex<sp/>objects<sp/>to<sp/>pointer<sp/>list<sp/>of<sp/>complex<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;convert<sp/>added<sp/>objects<sp/>of<sp/>std::string*<sp/>to<sp/>list<sp/>std::string**&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>noOfStringObjs<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1a4fdd0ed5dcc258c66a5b3e2ab0b6755e" kindref="member">search</ref>&lt;std::string*&gt;(<sp/>cObj<sp/>);<sp/></highlight><highlight class="comment">//<sp/>kill<sp/>all<sp/>added<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string**<sp/>stringObjList<sp/>=<sp/>controller.<ref refid="classBULKCC_1_1Controller_1aaf29510646ee9971c51648d7d7d525b2" kindref="member">list</ref>&lt;std::string*&gt;(<sp/>cObj<sp/>);<sp/></highlight><highlight class="comment">//<sp/>kill<sp/>all<sp/>added<sp/>objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>the<sp/>pointer<sp/>list<sp/>in<sp/>well-known<sp/>style</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;delete<sp/>converted<sp/>objects<sp/>of<sp/>std::string*<sp/>in<sp/>list<sp/>std::string**&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>noOfStringObjs;<sp/>i++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string*<sp/>stringObjFromList<sp/>=<sp/>stringObjList[<sp/>i<sp/>];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>stringObjFromList;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>i</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[<sp/>]<sp/>stringObjList;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>added<sp/>objects,<sp/>other<sp/>half</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;deleting<sp/>added<sp/>objects&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1a9207ad31cc64c35e57067ad2d36a38f6" kindref="member">clean</ref>(<sp/>cObj<sp/>);<sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delete<sp/>the<sp/>bulkccObj*<sp/>objects<sp/>themselves</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;deleting<sp/>list&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>controller.<ref refid="classBULKCC_1_1Controller_1aecc8d782c6c028ee173cb8b4c45e9782" kindref="member">erase</ref>(<sp/>cObj<sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;done&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(<sp/><ref refid="classBULKCC_1_1Exception" kindref="compound">Exception</ref>&amp;<sp/>exception<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>exception.<ref refid="classBULKCC_1_1Exception_1ad2023c5bc3c02a328d4074607d769eba" kindref="member">what</ref>(<sp/>)<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(<sp/>std::exception&amp;<sp/>exception<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;std::exception<sp/>caught:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>exception.<ref refid="classBULKCC_1_1Exception_1ad2023c5bc3c02a328d4074607d769eba" kindref="member">what</ref>(<sp/>)<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(<sp/>...<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;strange<sp/>exception<sp/>caught&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl<sp/>&lt;&lt;<sp/>std::flush;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>testObj</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>BULKCC</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/bulkcc/bulkcc.cpp"/>
+  </compounddef>
+</doxygen>

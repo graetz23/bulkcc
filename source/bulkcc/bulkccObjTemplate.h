@@ -1,6 +1,7 @@
-/** 
+/**
  * @file bulkccObjTemplate.h
- * @author Christian
+ * @brief Template class for type-specific stack nodes
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -35,26 +36,126 @@
 
 namespace BULKCC {
 
+/**
+ * @class ObjTemplate
+ * @brief Template class for type-specific stack nodes
+ *
+ * The ObjTemplate class is a concrete implementation of the Obj base class
+ * that can store objects of a specific type T. It provides type-safe storage
+ * and retrieval of objects within the stack structure.
+ *
+ * @tparam T The type of object to store in this node
+ *
+ * @section overview Overview
+ *
+ * Each ObjTemplate node can hold one object of type T. The object is stored
+ * as a member variable and can be added, fetched, or erased through the
+ * provided methods.
+ *
+ * @section usage Usage
+ *
+ * This class is typically not used directly. Use the Controller class
+ * to create and manage stacks:
+ *
+ * @code
+ * BULKCC::Controller controller;
+ * MyClass* obj = new MyClass();
+ * BULKCC::Obj* stack = controller.add<MyClass*>(obj);
+ * @endcode
+ *
+ * @see Controller
+ * @see Obj
+ */
 template<class T>
-class ObjTemplate : public Obj { // fancy in C++ but never Java!
+class ObjTemplate : public Obj {
 public:
 
-  ObjTemplate( void ); /// constructor
-  virtual ~ObjTemplate( void ); /// destructor
+  /**
+   * @brief Default constructor
+   *
+   * Initializes the template node with no object (null) and marks
+   * the object as not set.
+   */
+  ObjTemplate( void );
 
-  TYPE::ObjType getObjType( void ); /// return type of object
-  Str getObjTypeAsString( void ); /// return type of object as std::string
-  void add( T object ); /// add an object
-  bool checkObj( void ); /// return true if not NULL
-  void eraseObj( void ); /// use delete operator for object
-  T fetch( void ); /// fetch an object
+  /**
+   * @brief Virtual destructor
+   *
+   * Cleans up the template node. If an object is stored, it should
+   * be erased before destroying the node to avoid memory leaks.
+   */
+  virtual ~ObjTemplate( void );
 
-  Obj* getAsBaseObj( void ); /// get this template object as base object
+  /**
+   * @brief Get the object type
+   *
+   * Returns the type identifier for this template node.
+   *
+   * @return TYPE::ObjType Always returns TYPE::Template
+   */
+  TYPE::ObjType getObjType( void );
+
+  /**
+   * @brief Get the object type as string
+   *
+   * Returns a string representation of the template type.
+   *
+   * @return Str The type as a string (uses typeid)
+   */
+  Str getObjTypeAsString( void );
+
+  /**
+   * @brief Store an object in this node
+   *
+   * Stores the given object in this template node. Any previously
+   * stored object is overwritten.
+   *
+   * @param object The object to store
+   */
+  void add( T object );
+
+  /**
+   * @brief Check if this node contains an object
+   *
+   * Determines whether this template node currently holds a non-null object.
+   *
+   * @return true if a valid object is stored, false otherwise
+   */
+  bool checkObj( void );
+
+  /**
+   * @brief Delete the stored object
+   *
+   * Deletes the object stored in this node and sets the internal
+   * pointer to null. Does not delete the node itself.
+   */
+  void eraseObj( void );
+
+  /**
+   * @brief Fetch and remove the stored object
+   *
+   * Returns the stored object and sets the internal pointer to null.
+   * The caller takes ownership of the returned object.
+   *
+   * @return The stored object, or 0 if none
+   *
+   * @post The internal object pointer is set to null
+   */
+  T fetch( void );
+
+  /**
+   * @brief Get this template as base Obj pointer
+   *
+   * Returns a pointer to this object cast to the base Obj type.
+   *
+   * @return Obj* Pointer to this as base class
+   */
+  Obj* getAsBaseObj( void );
 
 private:
 
-  T _obj; // member
-  bool  _objIsSet; // member
+  T _obj;       ///< The stored object
+  bool _objIsSet; ///< Flag indicating if an object is stored
 
 }; // class ObjTemplate
 
@@ -102,6 +203,7 @@ ObjTemplate<T>::checkObj( void ) {
 template<class T> void  // use delete operator for object
 ObjTemplate<T>::eraseObj( void ) {
   delete _obj;
+  _obj = 0;
 } // eraseObj
 
 template<class T> T // fetch an object

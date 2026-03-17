@@ -1,6 +1,7 @@
-/** 
+/**
  * @file bulkccController.h
- * @author Christian
+ * @brief Controller class for managing bulk container stacks
+ * @author Christian (graetz23@gmail.com)
  *
  * BULKCC is distributed under the MIT License (MIT); this file is part of.
  *
@@ -35,25 +36,270 @@ namespace BULKCC {
 #define _VERSION_BULKCC_Controller_ 0.16 // 20141231
 // #define _DEBUG_BULKCC_Controller_
 
+/**
+ * @class Controller
+ * @brief Main controller class for managing bulk container stacks
+ *
+ * The Controller class provides the primary interface for managing collections
+ * of heterogeneous objects in a linked-list stack structure. It supports adding,
+ * searching, fetching, and listing objects of various types.
+ *
+ * @section overview Overview
+ *
+ * The Controller acts as the main interface for the BULKCC library. It provides
+ * template-based operations that allow you to work with any data type while
+ * maintaining type safety through the stack mechanism.
+ *
+ * @section operations Supported Operations
+ *
+ * - add(): Add new objects to the stack
+ * - search(): Find objects of a specific type
+ * - fetch(): Retrieve and remove objects from the stack
+ * - list(): Get all objects of a specific type as an array
+ * - clean(): Remove all stored objects (not the stack nodes)
+ * - erase(): Remove the entire stack including nodes
+ *
+ * @section example Example Usage
+ *
+ * @code
+ * BULKCC::Controller controller;
+ *
+ * // Add first object
+ * MyClass* obj1 = new MyClass();
+ * BULKCC::Obj* stack = controller.add<MyClass*>(obj1);
+ *
+ * // Add more objects to the stack
+ * controller.add<MyClass*>(new MyClass(), stack);
+ * controller.add<MyClass*>(new MyClass(), stack);
+ *
+ * // Search for objects of a specific type
+ * int count = controller.search<MyClass*>(stack);
+ *
+ * // Fetch an object (removes it from stack)
+ * MyClass* fetched = controller.fetch<MyClass*>(stack);
+ *
+ * // Clean up
+ * controller.erase(stack); // Delete entire stack
+ * @endcode
+ *
+ * @note The Controller does not take ownership of raw pointers unless explicitly
+ *       told to clean or erase. You must manage memory for your objects.
+ *
+ * @warning Always call erase() or clean() before destroying the Controller to
+ *          prevent memory leaks.
+ *
+ * @see Obj
+ * @see ObjTemplate
+ */
 class Controller {
   public:
 
-    Controller( void ); /// constructor
-    virtual ~Controller( void ); /// destructor
+    /**
+     * @brief Default constructor
+     *
+     * Initializes a new Controller instance for managing bulk container stacks.
+     *
+     * @post A new Controller is ready to manage objects
+     */
+    Controller( void );
 
-    void erase( Obj* obj ); /// erase all Obj objects
-    void clean( Obj* obj ); /// erase all object added in Obj objects
+    /**
+     * @brief Destructor
+     *
+     * Cleans up the Controller. Note: Does NOT automatically clean or erase
+     * any stacks or objects. You must call erase() or clean() on any active
+     * stacks before destroying the Controller.
+     *
+     * @warning Always ensure proper memory management by cleaning up stacks
+     */
+    virtual ~Controller( void );
 
-    template< class T > Obj* add( T object ); /// add first object
-    template< class T > void add( T object, Obj*& obj ); /// add following objects
-    template< class T > bool identify( Obj* obj ); /// create an Obj object
-    template< class T > int search( Obj*& obj ); /// search object of data type T
-    template< class T > T fetch( Obj*& obj ); /// add an object
-    template< class T > T* list( Obj*& obj ); /// get list of objects
+    /**
+     * @brief Erase all stack nodes
+     *
+     * Deletes all stack nodes in the linked list, including the internal
+     * storage for each node. This completely removes the stack structure.
+     *
+     * @param obj Pointer to the head of the stack (Obj*)
+     *
+     * @post The stack and all its nodes are deleted
+     * @post The obj pointer is now invalid (dangling)
+     *
+     * @note This does NOT delete the objects stored in the stack. Use clean()
+     *       first if you want to delete the stored objects as well.
+     *
+     * @code
+     * controller.clean(stack);  // Delete stored objects first
+     * controller.erase(stack);  // Then delete stack nodes
+     * @endcode
+     */
+    void erase( Obj* obj );
+
+    /**
+     * @brief Clean all stored objects from the stack
+     *
+     * Deletes all objects stored in the stack nodes but keeps the stack
+     * structure intact. After cleaning, the stack nodes remain but contain
+     * no objects.
+     *
+     * @param obj Pointer to the head of the stack (Obj*)
+     *
+     * @post All stored objects are deleted
+     * @post Stack nodes still exist but are empty
+     *
+     * @note This only deletes the stored objects, not the stack nodes.
+     *       Use erase() to remove the stack structure itself.
+     *
+     * @code
+     * controller.clean(stack);  // Delete stored objects
+     * controller.erase(stack);  // Delete stack nodes
+     * @endcode
+     */
+    void clean( Obj* obj );
+
+    /**
+     * @brief Add first object to create a new stack
+     *
+     * Creates a new stack by adding the first object. This is used to start
+     * a new stack with a single element.
+     *
+     * @tparam T The type of object to store
+     * @param object The object to store in the stack
+     *
+     * @return Pointer to the new stack (Obj*)
+     *
+     * @post A new stack is created with one node containing the object
+     *
+     * @code
+     * BULKCC::Controller controller;
+     * MyClass* obj = new MyClass();
+     * BULKCC::Obj* stack = controller.add<MyClass*>(obj);
+     * @endcode
+     *
+     * @see add(T object, Obj*& obj)
+     */
+    template< class T > Obj* add( T object );
+
+    /**
+     * @brief Add another object to an existing stack
+     *
+     * Adds a new object to the beginning of an existing stack, pushing
+     * the existing nodes down.
+     *
+     * @tparam T The type of object to store
+     * @param object The object to add to the stack
+     * @param obj Reference to the stack head pointer
+     *
+     * @post The new object is added at the top of the stack
+     *
+     * @code
+     * BULKCC::Controller controller;
+     * MyClass* obj1 = new MyClass();
+     * BULKCC::Obj* stack = controller.add<MyClass*>(obj1);
+     * controller.add<MyClass*>(new MyClass(), stack);  // Added to top
+     * @endcode
+     *
+     * @see add(T object)
+     */
+    template< class T > void add( T object, Obj*& obj );
+
+    /**
+     * @brief Identify if a stack node contains a specific type
+     *
+     * Uses dynamic casting to check if the stack node contains an object
+     * of the specified type T.
+     *
+     * @tparam T The type to check for
+     * @param obj Pointer to the stack node to check
+     *
+     * @return true if the node contains type T, false otherwise
+     */
+    template< class T > bool identify( Obj* obj );
+
+    /**
+     * @brief Search for objects of a specific type
+     *
+     * Traverses the stack and counts all objects of type T that are
+     * currently stored (not NULL).
+     *
+     * @tparam T The type of object to search for
+     * @param obj Reference to the stack head pointer
+     *
+     * @return Number of objects of type T found in the stack
+     *
+     * @code
+     * int count = controller.search<MyClass*>(stack);
+     * std::cout << "Found " << count << " objects" << std::endl;
+     * @endcode
+     */
+    template< class T > int search( Obj*& obj );
+
+    /**
+     * @brief Fetch and remove first object of a specific type
+     *
+     * Searches the stack for the first object of type T, retrieves it,
+     * and removes it from the stack. The object is returned and no longer
+     * managed by the stack.
+     *
+     * @tparam T The type of object to fetch
+     * @param obj Reference to the stack head pointer
+     *
+     * @return The fetched object of type T, or 0 if not found
+     *
+     * @post The first matching object is removed from the stack
+     *
+     * @code
+     * MyClass* fetched = controller.fetch<MyClass*>(stack);
+     * if (fetched) {
+     *     // Use fetched object
+     *     delete fetched;
+     * }
+     * @endcode
+     */
+    template< class T > T fetch( Obj*& obj );
+
+    /**
+     * @brief Get all objects of a specific type as an array
+     *
+     * Searches the stack for all objects of type T and returns them
+     * as a newly allocated array. Each matching object is removed from
+     * the stack during retrieval.
+     *
+     * @tparam T The type of objects to list
+     * @param obj Reference to the stack head pointer
+     *
+     * @return Array of objects of type T (must be deleted by caller)
+     * @return 0 if no objects found
+     *
+     * @post All matching objects are removed from the stack
+     *
+     * @code
+     * int count = controller.search<MyClass*>(stack);
+     * MyClass** list = controller.list<MyClass*>(stack);
+     * for (int i = 0; i < count; i++) {
+     *     delete list[i];
+     * }
+     * delete[] list;
+     * @endcode
+     */
+    template< class T > T* list( Obj*& obj );
 
   private:
 
-    template< class T > Obj* create( TYPE::ObjType objType ); /// create an Obj object
+    /**
+     * @brief Internal method to create stack nodes
+     *
+     * Factory method to create the appropriate type of stack node
+     * based on the requested object type.
+     *
+     * @tparam T The type of object the node will store
+     * @param objType The type of node to create
+     *
+     * @return Pointer to newly created stack node
+     *
+     * @throws Exception if unknown object type is requested
+     */
+    template< class T > Obj* create( TYPE::ObjType objType );
 
 };
 // class Controller
